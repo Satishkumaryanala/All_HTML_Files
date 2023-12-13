@@ -1,0 +1,20 @@
+body{
+	background-color: black;
+	color: ghostwhite;
+}
+table{
+	background-color: ghostwhite;
+	width: 100%;
+	color: black;
+	border-width: 6px;
+	border-style: solid;  /*Default*/
+	border-color: green;
+	padding: 15px;
+
+}
+td{
+	/*padding: 15px; */   /*same this is will be provided in the parent tag as well we'll get the same result as mentioned in style sheet*/
+	border-width: 3px;
+	border-style: dotted;
+	border-color: blue;
+}

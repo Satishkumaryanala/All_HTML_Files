@@ -1,0 +1,36 @@
+#main_header_new .rb_header .vertical_seperator {
+    width: 1px;
+    height: 20px;
+    background: #69457a;
+    margin: 0px 3rem;
+    display: inline-block;
+}
+
+.abc
+{
+    margin: 0px 4rem;
+    display:inline-block;
+    width: 1px;
+    height: 30px;
+    background: black;
+}
+.cur
+{
+    cursor: pointer;
+}
+.stick
+{
+    position: sticky ;
+    top: 0px;
+
+}
+#main_back
+{
+    background: grey url('Bootstrap files/Images/Evening.jpg') no-repeat scroll 0 0 ;
+    background-size: cover;
+}
+
+#main_wrapper
+{
+    background-color: rgba(255, 255, 255, 0.5);
+}

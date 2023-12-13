@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+    <style>
+        #abc
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-5 m-auto">
+                <div class="card text-center">
+                    <div class="card-header bg-primary">
+                        <h4>Calculator</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter 1st value" class="form-control" id="In_1">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter 2nd value" class="form-control" id="In_2">
+                            </div>
+                        </form>
+                        <div id="abc">
+                        <button id="addition">+</button>
+                        <button id="subtraction">-</button>
+                        <button id="multiplication">*</button>
+                        <button id="division">/</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <i>Final result:<span id="result" class="ml-2"></span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script code -->
+    <script>
+        let btnadd=document.querySelector('#addition');
+        let btnsub=document.querySelector('#subtraction');
+        let btnmul=document.querySelector('#multiplication');
+        let btndiv=document.querySelector('#division');
+        let value1=document.querySelector('#In_1');
+        let value2=document.querySelector('#In_2');
+        let F_result=document.querySelector('#result')
+        
+
+        btnadd.addEventListener('click',()=>
+        {
+            let v1=Number(value1.value);
+            let v2=Number(value2.value);
+            F_result.innerText=v1+v2
+        })
+
+        btnsub.addEventListener('click',()=>
+        {
+            let v1=Number(value1.value);
+            let v2=Number(value2.value);
+            F_result.innerText=v1-v2
+        })
+
+        btnmul.addEventListener('click',()=>
+        {
+            let v1=Number(value1.value);
+            let v2=Number(value2.value);
+            F_result.innerText=v1*v2
+        })
+        btndiv.addEventListener('click',()=>
+        {
+            let v1=Number(value1.value);
+            let v2=Number(value2.value);
+            F_result.innerText=v1/v2
+        })
+
+    </script>
+</body>
+</html>

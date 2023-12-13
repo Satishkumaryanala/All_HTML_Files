@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS transform</title>
+    <style>
+        .translate2D,.translate3D,.rotate2D,.rotate3D
+        {
+            background: linear-gradient(60deg, rgb(232, 129, 129),  rgb(140, 85, 85),  rgb(131, 131, 210) );
+            color:rgb(0, 0, 0);
+            width: 150px;
+            padding: auto;
+            text-align: center;
+            margin: 50px auto;
+            transition: all 1s linear 0s;
+            transition: all 1s linear 0s;
+        }
+        .parent
+        {
+            background-color: rgb(154, 211, 213);
+            height: 500px;
+            width: 400px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .parent:hover>.translate2D
+        {
+            transform: translate(50px,50px);
+        }
+        .parent:hover>.translate3D
+        {
+            transform: perspective(200px) translate3d(50px,50px,-80px);
+        }
+        .rotate2D
+        {
+            transform-origin: 50px 50px;
+        }
+        .parent:hover>.rotate2D
+        {
+            transform: perspective(200px) rotate(360deg);
+        } 
+        .parent:hover>.rotate3D
+        {
+            transform:rotate3d(10, 20, 50, 360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="translate2D">Translate 2D</div>
+        <div class="translate3D">Translate 3D</div>
+        <div class="rotate2D">Rotate 2D</div>
+        <div class="rotate3D">Rotate 3D</div>
+    </div>
+    
+</body>
+</html>

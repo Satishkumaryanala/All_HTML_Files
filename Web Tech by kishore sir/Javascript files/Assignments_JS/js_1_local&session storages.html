@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Zomato cart:-</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, 
+                    nesciunt sint cupiditate deserunt aliquid dolore eum alias ipsum, 
+                    suscipit dignissimos delectus. Eum nesciunt temporibus impedit 
+                    numquam aut doloremque esse. Odio voluptas corporis, praesentium 
+                    nam fugiat nulla inventore officia accusantium esse iure unde ipsum 
+                    voluptatem soluta numquam alias ut debitis, sit recusandae. Nemo 
+                    sequi consectetur sint iusto aspernatur amet aliquid exercitationem 
+                    pariatur, quod hic nisi officia corporis doloribus, perspiciatis rerum. 
+                    Neque, reprehenderit inventore quos, aut iusto vero quam sint deleniti 
+                    consequuntur impedit error dolor voluptatem tempora fugit iure eveniet 
+                    nulla adipisci facilis dolorem, asperiores quaerat enim repellendus 
+                    excepturi. Sunt, quos esse.</p>
+                    <button class="btn btn-md btn-danger">Order Now</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table bg-danger">
+                    <thead class="thead text-white">
+                        <th>S.No</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>price</th>
+                        <th>Quantity</th>
+                        <th>Total price</th>
+                    </thead>
+                    <tbody class="table-danger">
+                        <td>1</td>
+                        <td><img src="../../Bootstrap files/Images/biryani.jpg" alt="Image not found" width="100px" height="50"></td>
+                        <td>Biryani</td>
+                        <td>
+                            <i id="price"></i>
+                        </td>
+                        <td>
+                            <button id="Dec" class="btn btn-sm btn-outline-dark">-</button>
+                            <span id="qty"></span>
+                            <button id="Inc" class="btn btn-sm btn-outline-dark">+</button>
+                        </td>
+                        <td>
+                            <span class="T_price"></span>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- script code -->
+    <script>
+        let Prz=document.querySelector('#price');
+        let spanTag=document.querySelector('#qty');
+        let Totalprz=document.querySelector('.T_price');
+        let IncBtn=document.querySelector('#Inc');
+        let DecBtn=document.querySelector('#Dec');
+
+        let pric=299;
+        Prz.innerText=pric;
+
+        let Quantity=localStorage.getItem('q')?localStorage.getItem('q'):0;
+        localStorage.setItem('q',Quantity)
+        
+
+        totalprice=localStorage.getItem('tp')?localStorage.getItem('tp'):Quantity*pric;
+        localStorage.setItem('tp',Quantity*pric)
+
+        spanTag.innerText=Quantity;
+        Totalprz.innerText=pric*Quantity;
+
+        // Storage methods & inner documents method
+        IncBtn.addEventListener('click',increment)
+        DecBtn.addEventListener('click',Decrement)
+
+
+        function increment()
+        {
+            Quantity++;
+            totalprice=Quantity*pric;
+            localStorage.setItem('q',Quantity)
+            localStorage.setItem('tp',totalprice)
+            spanTag.innerText=localStorage.getItem('q');
+            Totalprz.innerText=localStorage.getItem('tp');
+        } 
+
+        function Decrement()
+        {
+            if (Quantity>1)
+            {
+                Quantity--;
+                totalprice=Quantity*pric;
+                localStorage.setItem('q',Quantity)
+                localStorage.setItem('tp',totalprice)
+                spanTag.innerText=localStorage.getItem('q');
+                Totalprz.innerText=localStorage.getItem('tp');
+            }
+            else
+            {
+                spanTag.innerText=localStorage.getItem('q');
+                Totalprz.innerText=localStorage.getItem('tp');
+            }
+        }
+    </script>
+</body>
+</html>

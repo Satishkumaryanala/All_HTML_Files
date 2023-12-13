@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS relative or absolute</title>
+    <style>
+        #parent
+        {
+            box-shadow: 0 0 20px black;
+            height: 500px;
+            width: 500px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #a
+        {
+            box-shadow: 0 0 20px green;
+            height: 460px;
+            width: 460px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        #b
+        {
+            box-shadow: 0 0 20px orangered;
+            height: 420px;
+            width: 420px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        #c
+        {
+            box-shadow: 0 0 20px blue;
+            height: 380px;
+            width: 380px;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+        #d
+        {
+            box-shadow: 0 0 20px orangered;
+            height: 340px;
+            width: 340px;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        Box 1
+        <div id="a">Box 2</div>
+        <div id="b">Box 3</div>
+        <div id="c">Box 4</div>
+        <div id="d">Box 5</div>
+    </div>
+    
+</body>
+</html>

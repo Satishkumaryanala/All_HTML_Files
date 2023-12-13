@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS prime number</title>
+</head>
+<body>
+	<h1>JS Prime number</h1>
+<!-- script code -->
+<script>
+	let n=Number(prompt('Enter a number to check'))
+	for (let l=1; l<=n; l++)
+	{
+		let f=0
+		if (l>1){
+			for (let i=2; i<l; i++)
+			{
+				if (l%i==0)
+				{
+					f=1
+					break
+				}
+			}
+				if (f==0)
+				{
+					console.log(l)
+			}
+		}
+	}
+</script>
+</body>
+</html>

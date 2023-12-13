@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ABC">To print wish msg</h1>
+    <button id="Wish">Wish here</button>
+
+    <!-- script code -->
+    <script>
+        let h1tag=document.querySelector('#ABC');
+        let Btnwish=document.querySelector('#Wish');
+
+        Btnwish.addEventListener('click',function()
+        {
+            h1tag.innerText='Hello! You doing good...';
+            h1tag.style.color='Orange';
+            h1tag.style.boxShadow='0 0 10px blue';
+        })
+    </script>
+</body>
+</html>

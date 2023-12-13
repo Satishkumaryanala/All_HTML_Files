@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>SetIntervel function</h3>
+    <h3>setTimeout function</h3>
+    <button class="btn">Clear interval</button>
+    <script>
+        let stopbtn=document.querySelector('.btn')
+        //setIntervel function
+        let count=0
+        function display()
+        {
+            count++
+            console.log(count)
+        }
+        
+        let x = setInterval(display,1000)
+        
+        stopbtn.addEventListener('click',()=>
+        {
+            clearInterval(x)
+        })
+        
+
+        // setTimeout function
+        /* CurrentTime()
+        function CurrentTime()
+        {
+            console.log(new Date().toLocaleTimeString());
+            setTimeout(NextTime,10000)
+        }
+        function NextTime()
+        {
+            console.log(new Date().toLocaleTimeString())
+        } */
+    </script>
+</body>
+</html>

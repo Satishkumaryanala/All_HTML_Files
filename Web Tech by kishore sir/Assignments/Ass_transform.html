@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS transform</title>
+    <style>
+        .parent
+        {
+            box-shadow: -5px 8px 15px black;
+            background: linear-gradient(45deg, blue, black ,red );
+            margin: 100px auto;
+            height: 450px;
+            width: 400px;
+            position: relative;
+        }
+        #box1,#box2,#box3,#box4
+        {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+        #box1
+        {
+            box-shadow: 0 0 10px blue;
+            background: rgba(255, 180, 0, 0.3);
+            transition: all 1s linear 0s;
+            
+        }
+        #box2
+        {
+            box-shadow: 0 0 10px rgb(77, 30, 52);
+            background: rgba(195, 210, 55, 0.3);
+            transition: all 1s linear 1s;
+            text-align: right;
+            
+        }
+        #box3
+        {
+            box-shadow: 0 0 10px rgb(76, 185, 49);
+            background: rgba(70, 45, 3, 0.3);
+            transition: all 1s linear 2s;
+            text-align: end;
+            
+        }
+        #box4
+        {
+            box-shadow: 0 0 10px rgb(100, 76, 33);
+            background: rgba(160, 50, 0, 0.3);
+            transition: all 1s linear 3s;
+            text-align: left;
+            
+        }
+        .parent:hover
+        {
+            cursor: pointer;
+        }
+        .parent:hover>#box1
+        {
+            transform: translateY(-100px);
+        }
+        .parent:hover>#box2
+        {
+            transform: translateX(100px);
+        }
+        .parent:hover>#box3
+        {
+            transform: translateY(100px);
+        }
+        .parent:hover>#box4
+        {
+            transform: translateX(-100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div id="box1">Box1</div>
+        <div id="box2">Box2</div>
+        <div id="box3">Box3</div>
+        <div id="box4">Box4</div>
+    </div>
+    
+</body>
+</html>

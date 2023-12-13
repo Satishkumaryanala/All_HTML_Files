@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+    <style>
+        .size
+        {
+            /* width: 500px; */
+           /* margin-left: 400px; */
+            background: grey url("../../Bootstrap files/Images/mountains.jpg") no-repeat 0 0 scroll;
+            background-size: cover;
+           
+        }
+        h3,h2
+        {
+            display: inline-block;
+        }
+        .inner
+        {
+            height: 300px;
+        }
+        .top
+        {
+            margin-top: 100px;
+            color: black;
+           /* background-color: grey;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-md-5 m-auto">
+                <div class="card">
+                    <div class="card-header bg-dark">
+                        <h1 class="text-light text-center">Stop watch</h1>
+                    </div>
+                    <div class="card-body size text-center text-dark inner">
+                        <div class="top">
+                            <h3 id="Hrs">Hours</h3><h2>:</h2>
+                            <h3 id="Mns">Minutes</h3><h2>:</h2>
+                            <h3 id="Secs">Seconds</h3><h2>:</h2>
+                            <h3 id="Msecs">Miliseconds</h3>
+                        </div>
+                        <button class="btn btn-primary" id="Stp">Stop</button>
+                        <button class="btn btn-primary" id="Res">Reset</button>
+                        <button class="btn btn-primary" id="St">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script code -->
+    <script>
+        let HourTag = document.querySelector('#Hrs')
+        let MinuteTag = document.querySelector('#Mns')
+        let SecondTag = document.querySelector('#Secs')
+        let MiliTag = document.querySelector('#Msecs')
+        let StartBtn = document.querySelector('#St')
+        let StopBtn = document.querySelector('#Stp')
+        let ResetBtn = document.querySelector('#Res')
+
+        let hr=0
+        let mn=0
+        let sec=0
+        let msc=0
+
+        HourTag.innerText = hr
+        MinuteTag.innerText = mn
+        SecondTag.innerText = sec
+        MiliTag.innerText = msc
+
+        /* For displaying the Hours */
+        function Hours()
+        {
+            hr+=1
+            HourTag.innerText = hr
+        }
+        
+        /* For displaying the Minutes */
+        function Minutes()
+        {
+            mn+=1
+            if (mn==59)
+           {
+               Hours()
+               mn=0
+               sec=0
+               msc=0
+               MinuteTag.innerText = mn
+           }
+            MinuteTag.innerText = mn
+            
+        }
+        /* For displaying the Seconds */
+        function Seconds()
+        {
+            sec+=1
+            if (sec==59)
+           {
+               Minutes()
+               sec=0
+               SecondTag.innerText = sec
+           }
+            SecondTag.innerText = sec
+        }
+
+        /* For displaying the miliseconds */
+        function Milisec()
+        {
+            msc+=1
+            if (msc==99)
+            {
+                Seconds()
+                msc=0
+                MiliTag.innerText = msc
+            }
+            MiliTag.innerText = msc
+        }
+        /* Buttons functionalities */
+        var StopKey
+        StartBtn.addEventListener('click',()=>
+        {
+           StopKey= setInterval(Milisec,10)
+           
+        })
+
+        ResetBtn.addEventListener('click',()=>
+        {
+            hr=0
+            mn=0
+            sec=0
+            msc=0
+            HourTag.innerText = hr
+            MinuteTag.innerText = mn
+            SecondTag.innerText = sec
+            MiliTag.innerText = msc
+        })
+        StopBtn.addEventListener('click',()=>
+        {
+            clearInterval(StopKey)
+        })
+    </script>
+</body>
+</html>

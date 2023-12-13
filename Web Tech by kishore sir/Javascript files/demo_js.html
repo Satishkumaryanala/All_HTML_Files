@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<!-- Script code -->
+	<script>
+		/* let sum=prompt('Enter a value : ')
+		console.log(sum, typeof sum)
+		a=25*'a'
+		console.log(a, typeof a)//NaN number
+		console.error('Ram')
+		console.warn('Sita')
+		let c = null
+		console.log(c,typeof c)
+
+		console.log(2+3+8+'sa'+9/2)
+
+		console.log(2=='2')
+		console.log(2==='2') */
+
+		/* let n=5
+		var p=''
+		for (let i=1; i<=n;i++)
+		{
+			for (let j=1;j<=n;j++)
+			{
+				p+='*'
+			}
+			p+='\n'
+		}
+		console.log(p) */
+
+		/* let n=parseInt(prompt('Enter number rows'))
+		var p=''
+		for (let i=1;i<=n;i++)
+		{
+			for (let j=1;j<=i;j++)
+			{
+				p+='*'
+			}
+			p+='\n'
+		}
+		console.log(p) */
+
+		let n=Number(prompt('Enter a number'))
+		var st=''
+		for (let i=1; i<=n;i++)
+		{
+			for (let j=n-1-i;j>=0;j--)
+			{
+				st+=' '
+			}
+			for (let k=1;k<=i;k++)
+			{
+				st+='*'
+			}
+			st+='\n'
+		}
+		console.log(st)
+	</script>
+	</body>
+	</html>

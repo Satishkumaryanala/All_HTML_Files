@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+    <style>
+        #bkg
+        {
+            background: lightgrey url("../../Bootstrap files/Images/Nature.jpg") no-repeat fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-5 m-auto">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h3 class="text-light text-center">Digital time watch</h3>
+                    </div>
+                    <div class="card-body text-center text-white" id="bkg">
+                        <h2>Asia/Kolkata</h2>
+                        <h3 id="time">Time</h3>
+                        <p id="date">Date</p>
+                        <button class="btn btn-md btn-outline-blue" id="stop">Stop button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scrpit code -->
+    <script>
+        let timeTag=document.querySelector('#time');
+        let DateTag=document.querySelector('#date');
+        let sbtn=document.querySelector('#stop');
+
+        function timer()
+        {
+            let opt={timzone:'Asia/Kolkata'};
+            let Curtime=new Date().toLocaleTimeString(opt,'en-us');
+            let Curdate=new Date().toLocaleDateString(opt,'en-us');
+
+            timeTag.innerText=Curtime;
+            DateTag.innerText=Curdate;
+        }
+        // timer()
+        let Stopkey=setInterval(timer,1000)
+        sbtn.addEventListener('click',()=>
+        {
+            clearInterval(Stopkey)
+        })
+    </script>
+</body>
+</html>

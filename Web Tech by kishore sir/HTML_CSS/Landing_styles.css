@@ -1,0 +1,73 @@
+*
+{
+    margin: 0;
+}
+header
+{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 100px;
+    padding: 5px;
+}
+header #logo
+{
+    margin-left: 15px;
+}
+header h1>span
+{
+    color: orange;
+}
+header h1
+{
+    font-size: 50px;
+    margin: 5px;
+}
+
+header #nav_bar
+{
+    margin: 10px;
+}
+header #nav_bar>a
+{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+#Landing
+{
+    background: rgb(182, 203, 203) url("../Assignments/landing2.jpg") no-repeat center scroll;
+    background-size: cover;
+    color: white;
+}
+#Landing
+{
+    height:100vh;
+    
+}
+#Landing>#wrap
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media(min-width:501px) and (max-width:800px)
+{
+    header
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width:0px) and (max-width:500px)
+{
+    header #nav_bar
+    {
+        display: none;
+    }
+}

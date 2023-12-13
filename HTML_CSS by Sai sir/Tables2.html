@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Table2</title>
+   <style>
+    table {
+        border-collapse: collapse;
+        border-color: blue;
+    }
+    th{
+        border-width: 2px;
+        border-color: brown;
+    }
+   </style>
+</head>
+<body>
+    <p>This is for rowspan and colspan usage in HTML</p>
+    <table border="2" width="100%">
+        <tr>
+            <th rowspan="2">Days</th>
+            <th colspan="6">Time</th>
+        </tr>
+        <tr>
+            <th>8:00</th>
+            <th>9:00</th>
+            <th>10:00</th>
+            <th>11:00</th>
+            <th>11:30</th>
+            <th>12:30</th>
+        </tr>
+        <tr>
+            <th>Mon</th>
+            <th>Course-1</th>
+            <th>Course-2</th>
+            <th>Course-3</th>
+            <th rowspan="5">Break</th>
+            <th>course-5</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Tue</th>
+            <th colspan="2"></th>
+            <th>Course-2</th>
+            <th>Course-4</th>
+            <th>Course-1</th>
+        </tr>
+        <tr>
+            <th>Wed</th>
+            <th>Course-3</th>
+            <th colspan="2"></th>
+            <th>Course-2</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Thur</th>
+            <th rowspan="2">Course-4</th>
+            <th>Course-2</th>
+            <th>Course-3</th>
+            <th rowspan="2" colspan="2">Thesis</th>
+        </tr>
+        <tr>
+            <th>Fri</th>
+            <th></th>
+            <th>Course-1</th>
+        </tr>
+
+    </table>
+    
+</body>
+</html>

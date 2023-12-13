@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ordered & Unordered lists</title>
+	<style type="text/css">
+		#list1{
+			background-color: skyblue;
+			color: red;
+			width: 40%;
+			font-style: italic;
+		}
+		#list1>li{
+			background-color: black;
+			margin: 5px;
+			padding: 5px;
+		}
+		#list2{
+			background-color: purple;
+			color: ghostwhite;
+			width: 40%;
+			font-style: italic;
+		}
+		#list2>li{
+			background-color: black;
+			margin: 5px;
+			padding: 5px;
+		}
+		#list3{
+			background-color: orange;
+			color: white;
+			width: fit-content;
+			font-size: 30px;
+		}
+		#list3>dt{
+			font-style: italic;
+			font-weight: bolder;
+		}
+		#list3>dd{
+			background-color: green;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p> In this example we not only about lists but also applying of styles to childs in different mode by ">" symbol</p>
+
+	<h1>Oredered list</h1>
+	<ol type="a" start="5" id="list1">
+		<li>Thumbs-up</li>
+		<li>Coke</li>
+		<li>Pepsi</li>
+		<li>Dew</li>
+		<li>Soda</li>
+	</ol>
+
+    <h1>Unordered list</h1>
+    <ul type="square" id="list2">
+    	<li>Straberry</li>
+    	<li>Venila</li>
+    	<li>Almond</li>
+    	<li>Coconut</li>
+    	<li>Sitaphal</li>
+    </ul>
+
+    <h1>Description list</h1>
+    <dl id="list3">
+    	<dt>Book</dt>
+    	<dd>
+    		Book is available in book stall <br>
+    		Book prise starts at 20/- <br>
+    		Books have different brand-names <br>
+    		Books is for study
+    	</dd>
+    </dl>
+</body>
+</html>

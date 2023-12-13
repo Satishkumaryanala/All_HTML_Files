@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .mar
+        {
+            margin-top: 200px;
+            margin-left: 400px!important;
+        }
+       .parent
+       {
+        display: grid;
+        grid-template-columns: repeat(4,110px);
+        row-gap: 5px;
+        background-color: rgba(0, 0, 40, 0.4);
+       }
+       .parent div
+       {
+        background-color: rgb(124, 157, 170);
+        border: 1px solid black;
+        border-radius: 90%;
+        padding: 20px;
+        font-size: 30px;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 0 10px black;
+        cursor: pointer;
+        transition: all 0.2s ease;
+       }
+       .parent div:active
+       {
+        transform:perspective(40px) translateZ(-1px);
+       }
+       div>a
+       {
+        color: black;
+       }
+    </style>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+</head>
+<body>
+    <div class="row mar">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header">
+                    <input type="text" class="container-fluid" id="display">
+                </div>
+                <div class="card-body container-fluid">
+                    <div class="parent">
+                        <div ><a href="" class="ac">Ac</a></div>
+                        <div ><a href="" class="Del">Del</a></div>
+                        <div ><a href="" class="Div">%</a></div>
+                        <div ><a href="" class="mul">*</a></div>
+                        <div ><a href="" class="val7">7</a></div>
+                        <div ><a href="" class="val8">8</a></div>
+                        <div ><a href="" class="val9">9</a></div>
+                        <div ><a href="" class="add">+</a></div>
+                        <div ><a href="" class="val4">4</a></div>
+                        <div ><a href="" class="val5">5</a></div>
+                        <div ><a href="" class="val6">6</a></div>
+                        <div ><a href="" class="sub">-</a></div>
+                        <div ><a href="" class="val1">1</a></div>
+                        <div ><a href="" class="val2">2</a></div>
+                        <div ><a href="" class="val3">3</a></div>
+                        <div ><a href="" class="calc">=</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script code -->
+    <script>
+        let allclr=document.querySelector(".ac")
+        let delt=document.querySelector(".Del")
+        let dsv=document.querySelector(".Div")
+        let mul=document.querySelector(".mul")
+        let add=document.querySelector(".add")
+        let sub=document.querySelector(".sub")
+        let calc=document.querySelector(".calc")
+        let val1=document.querySelector(".val1")
+        let val2=document.querySelector(".val2")
+        let val3=document.querySelector(".val3")
+        let val4=document.querySelector(".val4")
+        let val5=document.querySelector(".val5")
+        let val6=document.querySelector(".val6")
+        let val7=document.querySelector(".val7")
+        let val8=document.querySelector(".val8")
+        let val9=document.querySelector(".val9")
+        let display=document.querySelector("#display")
+        
+        val1.addEventListener('Click',()=>
+        {
+            display.value=val1.innerText
+        })
+    </script>
+</body>
+</html>

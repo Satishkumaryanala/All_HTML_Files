@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To find width</title>
+</head>
+<body>
+	<h1>ScreenSize:-<span id="display"></span>px</h1>
+	<!-- script code -->
+	<script>
+		window.addEventListener('resize',function()
+		{
+			let screensize=window.innerWidth;
+			let spanTag=document.querySelector('#display');
+				spanTag.innerText=screensize;
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .mt
+        {
+            margin-left: 600px;
+            margin-top: 150px;
+        }
+        .abc
+        {
+            display: inline-block;
+            box-shadow: 0 0 10px blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mt">
+        <div>
+            <img src="../../Bootstrap files/Images/tenet.jpg" alt="Image not found">
+        </div>
+        <div class="mt-3">
+            <button class="ml-4" id="addt"><i class="fa fa-solid fa-thumbs-up"></i></button>
+            <span id="Like"></span>
+            <button class="ml-5" id="dedt"><i class="fa fa-solid fa-thumbs-down"></i></button>
+            <span id="dislike"></span>
+        </div>
+        <div class="mt-3 ml-3">
+            <h4 class=" abc">Total count:-<span id="T_count"></span></h4>
+        </div>
+    </div>
+    
+    <!-- script code -->
+    <script>
+        let spanlike=document.querySelector('#Like');
+        let spanDlike=document.querySelector('#dislike');
+        let spanTcount=document.querySelector('#T_count');
+        let Btnadd=document.querySelector('#addt');
+        let Btnddt=document.querySelector('#dedt');
+
+
+        let likes=localStorage.getItem('L')?localStorage.getItem('L'):0;
+        localStorage.setItem('L',likes);
+        spanlike.innerText=likes;
+
+        let Dlikes=localStorage.getItem('Dl')?localStorage.getItem('Dl'):0;
+        localStorage.setItem('Dl',Dlikes);
+        spanDlike.innerText=Dlikes;
+
+        let total=(Number(likes)+Number(Dlikes))
+        let Totalcount=localStorage.getItem('TC')?localStorage.getItem('TC'):total;
+        localStorage.setItem('TC',Totalcount);
+        spanTcount.innerText=Totalcount;
+
+        // Internal function calls
+        Btnadd.addEventListener('click',addition)
+        Btnddt.addEventListener('click',subtraction)
+
+        function addition()
+        {
+            likes++;
+            total=(Number(likes)+Number(Dlikes))
+            localStorage.setItem('L',likes)
+            localStorage.setItem('TC',total)
+            spanlike.innerText=localStorage.getItem('L')
+            spanTcount.innerText=localStorage.getItem('TC')
+        }
+
+        function subtraction()
+        {
+            Dlikes++;
+            localStorage.setItem('Dl',Dlikes);
+            total=(Number(Dlikes)+Number(likes));
+            localStorage.setItem('TC',total)
+            spanDlike.innerText=localStorage.getItem('Dl');
+            spanTcount.innerText=localStorage.getItem('TC');
+        } 
+
+    </script>
+</body>
+</html>

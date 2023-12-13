@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS leap year</title>
+</head>
+<body>
+	<h1>Leap year</h1>
+<!-- script code -->
+<script>
+	function leapyear()
+	{
+		let a=Number(prompt('Enter a year: '));
+		if (a%100==0)
+		{
+			if (a%400==0)
+			{
+				console.log(a+" is a leap year");
+			}
+			else
+			{
+			console.log(a+" is not a leap year");
+			}
+		}
+		else if(a%4==0)
+		{
+			console.log(a+" is a leap year");
+		}
+		else
+		{
+			console.log(a+" is not a leap year");
+		}
+		
+	}
+	leapyear();
+</script>
+</body>
+</html>

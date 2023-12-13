@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object declerations</h1>
+    <script>
+        // Object literal
+        let obj={
+                    Sid   : 'ABC123',
+                    sname : 'SAM',
+                    sage  : 28,
+                    semail:'sam@gmail.com'
+                }
+        console.log(obj)
+        console.log(obj.sname)
+
+        // Instance of object
+        class student
+        {
+            constructor(id,name)
+            {
+                this.id=id;
+                this.name=name
+            }
+        }
+        let std1=new student('A001','Ram')
+        console.log(std1.name)
+
+        // Object constructor
+        function Mobile(price,brand)
+        {
+            this.price=price;
+            this.brand=brand;
+        }
+        let x=new Mobile(10000,'Samsung')
+        console.log(x.price)
+    </script>
+</body>
+</html>

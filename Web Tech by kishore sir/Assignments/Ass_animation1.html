@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS_Animations Ball</title>
+    <style>
+        div
+        {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: cyan;
+        }
+        div>span
+        {
+            background: linear-gradient(45deg,blue,rgb(227, 208, 208),black);
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            position: absolute;
+
+            animation: Ball 5s linear 0s 5 alternate;
+        }
+        @keyframes Ball
+        {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+            }
+            10%
+            {
+                top: 400px;
+                left: 150px;
+            }
+            20%
+            {
+                top: 0px;
+                left: 300px;
+            }
+            30%
+            {
+                top: 400px;
+                left: 450px;
+            }
+            40%
+            {
+                top: 0px;
+                left: 600px;
+            }
+            50%
+            {
+                top: 400px;
+                left: 750px;
+            }
+            60%
+            {
+                top: 0px;
+                left: 900px;
+            }
+            70%
+            {
+                top: 400px;
+                left: 1050px;
+            }
+            80%
+            {
+                top: 0px;
+                left: 1200px;
+            }
+            90%
+            {
+                top: 400px;
+                left: 1350px;
+            }
+            100%
+            {
+                top: 0px;
+                left: 1500px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+</body>
+</html>

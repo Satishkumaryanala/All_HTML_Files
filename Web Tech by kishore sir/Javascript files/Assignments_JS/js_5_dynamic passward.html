@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-5 m-auto">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h1 class="text-white text-center">
+                            JS password box
+                        </h1>
+                    </div>
+                    <div class="card-body bg-ligth">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="check-box">
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Enter your password" id="PW-box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script code -->
+    <script>
+        let checkbox=document.querySelector('#check-box')
+        let passwordbox=document.querySelector('#PW-box')
+
+        checkbox.addEventListener('change',function()
+        {
+            let typeValue=passwordbox.getAttribute('type')
+            if (typeValue==='password')
+            {
+                passwordbox.setAttribute('type','text')
+            }
+            else
+            {
+                passwordbox.setAttribute('type','password')
+            }
+        })
+    </script>
+</body>
+</html>

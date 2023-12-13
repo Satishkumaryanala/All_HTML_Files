@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Amstrong number</title>
+</head>
+<body>
+	<h1>Amstrong number</h1>
+<!-- script code -->
+<script>
+	let n= Number(prompt('Enter a range :'));
+	let p=String(n).length;
+	let sum=0;
+	let duplicate=n
+	while (n!=0)
+	{
+		sum+=(n%10)**p
+		n=(Math.floor(n/10))
+	}
+	if (duplicate==sum)
+	{
+		console.log(sum +' is Amstrong')
+	}
+	else
+	{
+		console.log(duplicate +` is not Amstrong`)
+	}
+</script>
+</body>
+</html>

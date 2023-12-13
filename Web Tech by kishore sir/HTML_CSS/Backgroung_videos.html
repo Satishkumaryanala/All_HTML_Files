@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back_ground videos</title>
+    <link rel="stylesheet" href="../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../Bootstrap files/Library files local/css/">
+    <style>
+        .main
+        {
+            position: relative;
+        }
+        .a
+        {
+            position: absolute;
+        }
+        .b
+        {
+            position: absolute;
+            top: 5px;
+            left: 450px;
+        }
+        .d
+        {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="a">
+            <video autoplay muted width="100%" height="100%" loop>
+                <source src="../Bootstrap files/Images/water_drop.mp4">
+            </video>
+            
+        </div>
+        <div class="b">
+            <!-- Default form register -->
+            <form class="text-center border border-dark p-5 d" action="#!">
+
+                <p class="h4 mb-4">Sign up</p>
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <!-- First name -->
+                        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
+
+                <!-- E-mail -->
+                <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                <!-- Password -->
+                <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-white mb-4">
+                    At least 8 characters and 1 digit
+                </small>
+
+                <!-- Phone number -->
+                <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-white mb-4">
+                    Optional - for two step authentication
+                </small>
+
+                <!-- Newsletter -->
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+                    <label class="custom-control-label text-white" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+                </div>
+
+                <!-- Sign up button -->
+                <button class="btn btn-info my-4 btn-block " type="submit">Sign in</button>
+
+                <!-- Social register -->
+                <p class="text-white">or sign up with:</p>
+
+                <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                <hr>
+
+                <!-- Terms of service -->
+                <p class="text-white">By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="https://www.google.com/search?q=terms+and+conditions&oq=terms+and+conditio&gs_lcrp=EgZjaHJvbWUqDQgAEAAYgwEYsQMYgAQyDQgAEAAYgwEYsQMYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQLhiABDIHCAUQLhiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDQ3NTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" 
+                    target="_blank">terms of service</a>
+
+            </form>
+            <!-- Default form register -->
+        </div>
+    </div>
+    
+</body>
+</html>

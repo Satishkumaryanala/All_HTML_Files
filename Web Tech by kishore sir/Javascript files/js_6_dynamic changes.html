@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Diplay count value:-<span class="display"></span></h1>
+	<button onclick="increment()">Increment</button>
+	<script>
+		let spantag=document.querySelector('.display')
+		let count=0
+		spantag.innerText=count
+		function increment()
+		{
+			count++;
+			spantag.innerText=count;
+		}
+	</script>
+</body>
+</html>

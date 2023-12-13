@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Transform</title>
+    <style>
+        div
+        {
+            background-color: black;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            padding: 10px;
+            color: red;
+
+            transition-property: width, background-color;
+            transition-duration: 1s, 1s;
+            transition-delay: 0s, 0s;
+            transition-timing-function: linear, linear;
+
+           /*  transition: all 1s linear 0s; */
+
+        }
+        div:hover
+        {
+            cursor: pointer;
+            width: 600px;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Text here</h1>
+    </div>
+</body>
+</html>

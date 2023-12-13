@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions declerations</h1>
+
+    <script>
+        // function decleration
+        main();
+        function main()
+        {
+            console.log(`Hii js`);
+        }
+
+        // function expression
+        let abc = function()
+        {
+            let a = 10;
+            let b= 50;
+            console.log(a++ + b--);
+            console.log(a,b)
+        }
+        abc();
+        // arrow function
+        let mul = ()=>
+        {
+            let a = 10;
+            let b = 20;
+            console.log(a*b);
+        }
+        mul();
+    </script>
+</body>
+</html>

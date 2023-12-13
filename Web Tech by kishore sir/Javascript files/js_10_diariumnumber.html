@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Desarium number</h3>
+    <script>
+        let n=parseInt(prompt('Enter a value to check desarium or not'))
+        let duplicate=n
+        let p=String(n).length
+        let sum=0
+        while (n!=0)
+        {
+            sum+=(Math.pow((n%10),p))
+            n=Math.floor(n/10)
+            p-=1
+        }
+        if (duplicate===sum)
+        {
+            console.log(`${duplicate} is a disarium number`)
+        }
+        else
+        {
+            console.log(`${duplicate} is not a disarium number`)
+        }
+    </script>
+</body>
+</html>

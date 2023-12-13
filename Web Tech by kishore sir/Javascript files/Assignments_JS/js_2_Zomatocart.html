@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/bootstrap.css">
+    <link rel="stylesheet" href="../../Bootstrap files/Library files local/css/mdb.css">
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-danger">Zomato cart:-</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sed a porro officia q
+                uasi, voluptatem necessitatibus excepturi amet molestias, doloremque nostrum. Nesciunt 
+                ducimus rerum, consectetur fuga quae quasi doloribus, similique expedita aperiam reiciendis
+                 totam assumenda ipsa blanditiis adipisci et. Sunt quia tenetur adipisci delectus voluptate
+                  veniam sit, dolorum ullam non.</p>
+                  <button class="btn btn-md btn-danger">Order now</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table bg-danger">
+                    <thead class="thead text-white">
+                        <th>S.no</th>
+                        <th> Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total price</th>
+                    </thead>
+                    <tbody class="table-danger">
+                        <tr>
+                            <td>1</td>
+                            <td><img src="../../Bootstrap files/Images/biryani.jpg" alt="Image not found" width="100px" height="50"></td>
+                            <td>Biryani</td>
+                            <td>
+                                <span class="price"></span>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-dark " onclick="subtraction()">-</button>
+                                <span class="qtn"></span>
+                                <button class="btn btn-sm btn-outline-dark" onclick="addition()">+</button>
+                            </td>
+                            <td>
+                                <span class="total_p"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- script code -->
+    <script>
+        let priz=document.querySelector('.price');
+        let prc=229.00;
+        priz.innerText=prc;
+
+        let qty=document.querySelector('.qtn');
+        let count=0;
+        qty.innerText=count;
+
+        let total=document.querySelector('.total_p');
+        let sum=0;
+        total.innerText=sum;
+        function addition()
+        {
+            sum+=prc
+            count++;
+            total.innerText=sum;
+            qty.innerText=count;
+
+        }
+        function subtraction()
+        {
+            if (count>1)
+            {
+                sum-=prc;
+                count--;
+                total.innerText=sum;
+                qty.innerText=count;
+            }
+            else
+            {
+                total.innerText=prc;
+                qty.innerText=1;
+            }
+
+        }
+    </script>
+</body>
+</html>
